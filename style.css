@@ -1,0 +1,143 @@
+/* Apply basic styling to the whole page */
+body {
+    font-family: "Quicksand", "Trebuchet MS", "Comic Sans MS", Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+
+    /* Soft pink gradient with little polka dots */
+    background-color: #ffd6e8;
+    background-image:
+        radial-gradient(#ffffff88 12%, transparent 13%),
+        linear-gradient(135deg, #ffe4f1, #ffc2dd);
+    background-size: 30px 30px, 100% 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Calculator container */
+.calculator {
+    width: 350px;
+    background-color: #fff7fb;
+    padding: 25px;
+    border-radius: 28px;
+    border: 4px solid #ffb3d1;
+    box-shadow: 0 8px 0 #ff8fbf, 0 14px 24px rgba(233, 30, 99, 0.3);
+}
+
+.sparkles {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 6px;
+}
+
+/* Calculator title */
+h1 {
+    text-align: center;
+    color: #e0457f;
+    font-size: 26px;
+    margin: 8px 0 0;
+}
+
+/* Input labels */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #d6336c;
+}
+
+/* Number inputs */
+input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #8a2b53;
+    background-color: #fff;
+    border: 2px solid #ffb3d1;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #f3a6c4;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff6fa8;
+    box-shadow: 0 0 0 4px rgba(255, 111, 168, 0.25);
+}
+
+/* Operation buttons container */
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* All buttons (bubbly pill shape) */
+button {
+    padding: 11px;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: bold;
+    color: white;
+    background-color: #ff6fa8;
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 4px 0 #e0457f;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+/* Hover: lift up a little */
+button:hover {
+    background-color: #ff5a9b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #e0457f;
+}
+
+/* Press: squish down */
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #e0457f;
+}
+
+/* Result display */
+#result {
+    margin-top: 22px;
+    padding: 15px;
+    text-align: center;
+    color: #b0275d;
+    background-color: #ffe9f3;
+    border: 3px dotted #ff9fc6;
+    border-radius: 20px;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+#result::before {
+    content: "✨ ";
+}
+
+/* Clear button */
+.clear-button {
+    width: 100%;
+    margin-top: 12px;
+    background-color: #c9558a;
+    box-shadow: 0 4px 0 #9c3a68;
+}
+
+.clear-button:hover {
+    background-color: #b8467a;
+    box-shadow: 0 6px 0 #9c3a68;
+}
+
+.clear-button:active {
+    box-shadow: 0 1px 0 #9c3a68;
+}
